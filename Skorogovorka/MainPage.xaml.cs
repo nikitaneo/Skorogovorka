@@ -58,19 +58,27 @@ namespace Skorogovorka
                 recordButtonPushed = true;
                 textBlock.Text = "Recording...";
                 await CreateAudioGraph();
-                await ToggleRecordStart();
+                graph.Start();
             }
             else
             {
                 recordButtonPushed = false;
                 textBlock.Text = "Saved!";
 
-                await ToggleRecordStop();
+                graph.Stop();
+
+                TranscodeFailureReason finalizeResult = await fileOutputNode.FinalizeAsync();
+                if (finalizeResult != TranscodeFailureReason.None)
+                {
+                    // Finalization of file failed. Check result code to see why
+                    textBlock.Text = "Cannot finalize file " + finalizeResult.ToString();
+                    return;
+                }
 
                 Guid requestId = Guid.NewGuid();
                 var Uri = @"https://speech.platform.bing.com/recognize?version=3.0&requestid=" + requestId.ToString() + @"&appID=D4D52672-91D7-4C74-8AD8-42B1D981415A&format=json&locale=en-US&device.os=Windows%20OS&scenarios=ulm&instanceid=f1efbd27-25fd-4212-9332-77cd63176112";
 
-                var resp = SendRequestAsync(Uri, accessToken, "audio/wav; samplerate=16000", "Assets/whatstheweatherlike.wav");
+                var resp = SendRequestAsync(Uri, accessToken, "audio/wav; samplerate=16000", path);
                 textBlock.Text = resp;
             }
         }
@@ -146,25 +154,6 @@ namespace Skorogovorka
             // Connect the input node to both output nodes
             deviceInputNode.AddOutgoingConnection(fileOutputNode);
             textBlock.Text = storageFolder.Path.ToString();
-        }
-
-        private async Task ToggleRecordStart()
-        {
-            graph.Start();
-        }
-
-        private async Task ToggleRecordStop()
-        {
-            // Good idea to stop the graph to avoid data loss
-            graph.Stop();
-
-            TranscodeFailureReason finalizeResult = await fileOutputNode.FinalizeAsync();
-            if (finalizeResult != TranscodeFailureReason.None)
-            {
-                // Finalization of file failed. Check result code to see why
-                textBlock.Text = "Cannot finalize file " + finalizeResult.ToString();
-                return;
-            }
         }
     }
 }
