@@ -10,13 +10,13 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>f69830a5-0de5-4fa9-9b50-14c5ebfae9a9</PackageIdentityName>
     <PackageIdentityPublisher>CN=Nikita</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>89AF31C8D8CF9DC112C5057D1833EF5B1DF4AF41D8F0FE72A9ABCBD99F12F4C9</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>99F9E85A2232729118FD546BEF37D0E8C7B076475905B18798CAA8F7901B2453</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>f69830a5-0de5-4fa9-9b50-14c5ebfae9a9_1.0.0.0_x86__8q94vvp0nn14t</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>f69830a5-0de5-4fa9-9b50-14c5ebfae9a9_8q94vvp0nn14t!App</RegisteredUserModeAppID>
     <RegisteredPackageID>f69830a5-0de5-4fa9-9b50-14c5ebfae9a9</RegisteredPackageID>
@@ -25,16 +25,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-14T20:07:51.841</Modified>
+      <Modified>2016-10-14T21:18:54.766</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\bin\x86\Debug\Skorogovorka.exe">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\bin\x86\Debug\Skorogovorka.exe">
       <PackagePath>entrypoint\Skorogovorka.exe</PackagePath>
-      <Modified>2016-10-14T20:07:51.439</Modified>
+      <Modified>2016-10-14T21:18:54.327</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nikita\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -448,57 +448,57 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T20:11:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\Assets\mic-512.png">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\Assets\mic-512.png">
       <PackagePath>Assets\mic-512.png</PackagePath>
       <Modified>2016-10-14T17:30:53.471</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\Assets\mic-512_pushed.png">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\Assets\mic-512_pushed.png">
       <PackagePath>Assets\mic-512_pushed.png</PackagePath>
-      <Modified>2016-10-14T15:49:01.896</Modified>
+      <Modified>2016-10-14T20:31:33.247</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2015-09-20T14:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T14:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T14:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T14:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T14:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T14:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T14:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\Assets\whatstheweatherlike.wav">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\Assets\whatstheweatherlike.wav">
       <PackagePath>Assets\whatstheweatherlike.wav</PackagePath>
       <Modified>2016-10-14T19:47:50.906</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2016-10-14T15:37:08.186</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\bin\x86\Debug\Skorogovorka.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\bin\x86\Debug\Skorogovorka.xr.xml">
       <PackagePath>Skorogovorka.xr.xml</PackagePath>
       <Modified>2016-10-14T17:58:02.687</Modified>
     </AppxPackagedFile>
@@ -506,14 +506,14 @@
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2016-10-13T23:30:20.933</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-14T20:07:01.315</Modified>
+      <Modified>2016-10-14T21:17:48.856</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Diagrams\Skorogovorka\Skorogovorka\bin\x86\Debug\Core\Skorogovorka.exe">
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\bin\x86\Debug\Core\Skorogovorka.exe">
       <PackagePath>Skorogovorka.exe</PackagePath>
-      <Modified>2016-10-14T20:07:51.835</Modified>
+      <Modified>2016-10-14T21:18:54.760</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
