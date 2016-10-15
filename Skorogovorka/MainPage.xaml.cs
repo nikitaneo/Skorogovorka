@@ -11,11 +11,43 @@ using Windows.Storage;
 using Windows.Media.MediaProperties;
 using Windows.Media.Capture;
 using Windows.Media.Transcoding;
+using Newtonsoft.Json;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace Skorogovorka
 {
+    public class ParsedJson
+    {
+        public double version { get; set; }
+        public Header header { get; set; }
+
+        public class Header
+        {
+            public class Propertie
+            {
+                public string requestId { get; set; }
+                public string LOWCONF { get; set; }
+            }
+
+            public class Result
+            {
+                public string scenario { get; set; }
+                public string name { get; set; }
+                public string lexical { get; set; }
+                public double confidence { get; set; }
+            }
+
+
+            public string status { get; set; }
+            public string scenario { get; set; }
+            public string name { get; set; }
+            public string lexical { get; set; }
+
+            public Propertie properties { get; set; }
+            public Result[] results { get; set; }
+        }
+    }
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -28,8 +60,6 @@ namespace Skorogovorka
         private AudioFileOutputNode fileOutputNode;
         private AudioDeviceInputNode deviceInputNode;
         private string path;
-
-        Task t1, t2;
 
         public MainPage()
         {
@@ -79,7 +109,9 @@ namespace Skorogovorka
                 var Uri = @"https://speech.platform.bing.com/recognize?version=3.0&requestid=" + requestId.ToString() + @"&appID=D4D52672-91D7-4C74-8AD8-42B1D981415A&format=json&locale=en-US&device.os=Windows%20OS&scenarios=ulm&instanceid=f1efbd27-25fd-4212-9332-77cd63176112";
 
                 var resp = SendRequestAsync(Uri, accessToken, "audio/wav; samplerate=16000", path);
-                textBlock.Text = resp;
+                string json = resp;
+                ParsedJson jsonResp = JsonConvert.DeserializeObject<ParsedJson>(json);
+                textBlock.Text = jsonResp.header.lexical;
             }
         }
 
