@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image x:Name="__start_record_button" HorizontalAlignment="Left" Height="139" Margin="108,350,0,0" VerticalAlignment="Top" Width="144" Source="Assets/mic-512.png" Tapped="RecordStart"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="108,74,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Выбрать" HorizontalAlignment="Left" Margin="156,271,0,0" VerticalAlignment="Top" Click="button_Click"/>
+
     </Grid>
 </Page>
