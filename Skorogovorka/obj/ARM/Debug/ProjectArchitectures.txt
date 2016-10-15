@@ -1,1 +1,1 @@
-C:\Users\Nikita\Desktop\Skorogovorka\Skorogovorka\Skorogovorka.csproj;arm
+C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\Skorogovorka.csproj;arm
