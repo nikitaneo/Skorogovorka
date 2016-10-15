@@ -1,1 +1,1 @@
-C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\Skorogovorka.csproj;x86
+C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\Skorogovorka.csproj;x86

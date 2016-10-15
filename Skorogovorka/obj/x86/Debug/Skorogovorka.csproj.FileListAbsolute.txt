@@ -777,3 +777,14 @@ C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\x86\Debug\qualifiers.t
 C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\obj\x86\Debug\Speaker.g.i.cs
+C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\obj\x86\Debug\Speaker.g.cs
+C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\obj\x86\Debug\SelectPatter.g.i.cs
+C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\obj\x86\Debug\SelectPatter.g.cs
+C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\obj\x86\Debug\Speaker.xaml
+C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\obj\x86\Debug\SelectPatter.xaml
+C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\obj\x86\Debug\Speaker.xbf
+C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\obj\x86\Debug\SelectPatter.xbf
+C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\bin\x86\Debug\Speaker.xbf
+C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\bin\x86\Debug\SelectPatter.xbf
+C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\bin\x86\Debug\Newtonsoft.Json.dll
