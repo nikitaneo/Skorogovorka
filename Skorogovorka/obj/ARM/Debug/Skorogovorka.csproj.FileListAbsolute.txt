@@ -575,3 +575,13 @@ C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\ARM\Debug\qualifiers.t
 C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\ARM\Debug\ProjectArchitectures.txt
 C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\bin\ARM\Debug\Newtonsoft.Json.dll
+C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\bin\ARM\Debug\Speaker.xbf
+C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\bin\ARM\Debug\SelectPatter.xbf
+C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\ARM\Debug\Speaker.g.i.cs
+C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\ARM\Debug\Speaker.g.cs
+C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\ARM\Debug\SelectPatter.g.i.cs
+C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\ARM\Debug\SelectPatter.g.cs
+C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\ARM\Debug\Speaker.xaml
+C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\ARM\Debug\SelectPatter.xaml
+C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\ARM\Debug\Speaker.xbf
+C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\obj\ARM\Debug\SelectPatter.xbf

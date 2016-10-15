@@ -1,191 +1,55 @@
 ﻿using System;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Input;
+using System.Collections.Generic;
 using System.IO;
-using System.Threading.Tasks;
-using Windows.Media.Audio;
-using Windows.Media.Render;
-using Windows.Storage;
-using Windows.Media.MediaProperties;
-using Windows.Media.Capture;
-using Windows.Media.Transcoding;
-using Newtonsoft.Json;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Skorogovorka
 {
-    public class ParsedJson
-    {
-        public double version { get; set; }
-        public Header header { get; set; }
-
-        public class Header
-        {
-            public class Propertie
-            {
-                public string requestId { get; set; }
-                public string LOWCONF { get; set; }
-            }
-
-            public class Result
-            {
-                public string scenario { get; set; }
-                public string name { get; set; }
-                public string lexical { get; set; }
-                public double confidence { get; set; }
-            }
-
-
-            public string status { get; set; }
-            public string scenario { get; set; }
-            public string name { get; set; }
-            public string lexical { get; set; }
-
-            public Propertie properties { get; set; }
-            public Result[] results { get; set; }
-        }
-    }
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private bool recordButtonPushed = false;
-        private string accessToken = "";
+        public class Patter
+        {
+            public int id { get; set; }
+            public string patter { get; set; }
+            public double confidence { get; set; }
 
-        private AudioGraph graph;
-        private AudioFileOutputNode fileOutputNode;
-        private AudioDeviceInputNode deviceInputNode;
-        private string path;
+            public override string ToString()
+            {
+                return patter;
+            }
+        }
+
+        public List<Patter> patters = new List<Patter>();
 
         public MainPage()
         {
             this.InitializeComponent();
-            string responce = SpeechApiInit();
-            accessToken = responce;
+            patters.Add(new Patter { id = 1, patter = "Peter Piper picked a peck of pickled peppers.\nA peck of pickled peppers Peter Piper picked.\nIf Peter Piper picked a peck of pickled peppers,\nWhere's the peck of pickled peppers Peter Piper picked?\n", confidence = 0.0 });
+            patters.Add(new Patter { id = 2, patter = "Brothers Bean bought for their baby brother Bob’s birthday\nA big box of black bees, a blue box of brown beetles,\nAnd a big blue box of beautiful butterflies.\nBut which blue box is a bit bigger?\n", confidence = 0.0 });
+            patters.Add(new Patter {id = 3, patter = "A funny puppy runs in front of a pub,\nA fluffy puppy runs in front of a club.\nIf the funny puppy didn’t run in front of the pub,\nWould the fluffy puppy run in front of the club?\n", confidence = 0.0});
+            patters.Add(new Patter {id = 4, patter = "Rock concerts shock pop icons,\nPop concerts shock rock icons.\nIf rock concerts didn’t shock pop icons,\nWould pop concerts shock rock icons?\n", confidence = 0.0});
+            patters.Add(new Patter {id = 5, patter = "Dolly wants to watch novels on TV\nPolly wants to watch horrors on TV.\nIf Dolly didn’t want to watch novels on TV,\nWould Polly want to watch horrors on TV?\n", confidence = 0.0});
+            patters.Add(new Patter { id = 5, patter = "Denise sees the fleece,\nDenise sees the fleas.\nAt least Denise could sneeze\nand feed and freeze the fleas.\n", confidence = 0.0});
         }
 
-        private string SpeechApiInit()
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-            // Create a client
-            HttpClient httpClient = new HttpClient();
-
-            // Add a new Request Message
-            HttpRequestMessage requestMessage = new HttpRequestMessage(HttpMethod.Post, "https://api.cognitive.microsoft.com/sts/v1.0/issueToken");
-            requestMessage.Headers.Add("Ocp-Apim-Subscription-Key", "2dfda230f1224754a35ced999038f13d");
-            HttpResponseMessage response = httpClient.SendAsync(requestMessage).GetAwaiter().GetResult(); ;
-            string responseAsString = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
-            return responseAsString;
-        }
-
-        private async void RecordStart(object sender, TappedRoutedEventArgs e)
-        {
-            if (!recordButtonPushed)
-            {
-                recordButtonPushed = true;
-                textBlock.Text = "Recording...";
-                await CreateAudioGraph();
-                graph.Start();
-            }
-            else
-            {
-                recordButtonPushed = false;
-                textBlock.Text = "Saved!";
-
-                graph.Stop();
-
-                TranscodeFailureReason finalizeResult = await fileOutputNode.FinalizeAsync();
-                if (finalizeResult != TranscodeFailureReason.None)
-                {
-                    // Finalization of file failed. Check result code to see why
-                    textBlock.Text = "Cannot finalize file " + finalizeResult.ToString();
-                    return;
-                }
-
-                Guid requestId = Guid.NewGuid();
-                var Uri = @"https://speech.platform.bing.com/recognize?version=3.0&requestid=" + requestId.ToString() + @"&appID=D4D52672-91D7-4C74-8AD8-42B1D981415A&format=json&locale=en-US&device.os=Windows%20OS&scenarios=ulm&instanceid=f1efbd27-25fd-4212-9332-77cd63176112";
-
-                var resp = SendRequestAsync(Uri, accessToken, "audio/wav; samplerate=16000", path);
-                string json = resp;
-                ParsedJson jsonResp = JsonConvert.DeserializeObject<ParsedJson>(json);
-                textBlock.Text = jsonResp.header.lexical;
-            }
-        }
-
-        public string SendRequestAsync(string url, string bearerToken, string contentType, string fileName)
-        {
-                var content = new StreamContent(File.OpenRead(fileName));
-                content.Headers.TryAddWithoutValidation("Content-Type", contentType);
-
-                using (var httpClient = new HttpClient())
-                {
-                    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-                    var response = httpClient.PostAsync(url, content).Result;
-
-                    return response.Content.ReadAsStringAsync().Result;
-                }
-        }
-
-
-        private async Task CreateAudioGraph()
-        {
-            if (graph != null)
-            {
-                graph.Dispose();
-            }
-
-            AudioGraphSettings settings = new AudioGraphSettings(AudioRenderCategory.Media);
-            settings.QuantumSizeSelectionMode = QuantumSizeSelectionMode.SystemDefault;
-
-            CreateAudioGraphResult result = await AudioGraph.CreateAsync(settings);
-
-            if (result.Status != AudioGraphCreationStatus.Success)
-            {
-                // Cannot create graph
-                textBlock.Text = "Cannot create graph";
-                return;
-            }
-
-            graph = result.Graph;
-
-            // Create a device input node using the default audio input device (manifest microphone!!!!)
-            CreateAudioDeviceInputNodeResult deviceInputNodeResult = await graph.CreateDeviceInputNodeAsync(MediaCategory.Other);
-
-            if (deviceInputNodeResult.Status != AudioDeviceNodeCreationStatus.Success)
-            {
-                // Cannot create device input node
-                textBlock.Text = "Cannot create device input " + deviceInputNodeResult.Status.ToString();
-                return;
-            }
-
-            deviceInputNode = deviceInputNodeResult.DeviceInputNode;
-
-            //creating file
-
-            StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-            StorageFile file = await storageFolder.CreateFileAsync("sample.wav", Windows.Storage.CreationCollisionOption.ReplaceExisting);
-            path = file.Path.ToString();
-
-            MediaEncodingProfile fileProfile = MediaEncodingProfile.CreateWav(AudioEncodingQuality.Medium);
-
-            // Operate node at the graph format, but save file at the specified format
-            CreateAudioFileOutputNodeResult fileOutputNodeResult = await graph.CreateFileOutputNodeAsync(file, fileProfile);
-
-            if (fileOutputNodeResult.Status != AudioFileNodeCreationStatus.Success)
-            {
-                // FileOutputNode creation failed
-                textBlock.Text = "Error creation file";
-                return;
-            }
-
-            fileOutputNode = fileOutputNodeResult.FileOutputNode;
-
-            // Connect the input node to both output nodes
-            deviceInputNode.AddOutgoingConnection(fileOutputNode);
-            textBlock.Text = storageFolder.Path.ToString();
+            Frame.Navigate(typeof(SelectPatter), patters);
         }
     }
 }

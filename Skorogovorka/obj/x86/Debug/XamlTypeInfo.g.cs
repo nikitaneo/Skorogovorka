@@ -132,15 +132,19 @@ namespace Skorogovorka.Skorogovorka_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
+            _typeNameTable = new string[5];
             _typeNameTable[0] = "Skorogovorka.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "Skorogovorka.Speaker";
+            _typeNameTable[4] = "Skorogovorka.SelectPatter";
 
-            _typeTable = new global::System.Type[3];
+            _typeTable = new global::System.Type[5];
             _typeTable[0] = typeof(global::Skorogovorka.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::Skorogovorka.Speaker);
+            _typeTable[4] = typeof(global::Skorogovorka.SelectPatter);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -176,6 +180,8 @@ namespace Skorogovorka.Skorogovorka_XamlTypeInfo
         }
 
         private object Activate_0_MainPage() { return new global::Skorogovorka.MainPage(); }
+        private object Activate_3_Speaker() { return new global::Skorogovorka.Speaker(); }
+        private object Activate_4_SelectPatter() { return new global::Skorogovorka.SelectPatter(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -200,6 +206,20 @@ namespace Skorogovorka.Skorogovorka_XamlTypeInfo
 
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::Skorogovorka.Skorogovorka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  Skorogovorka.Speaker
+                userType = new global::Skorogovorka.Skorogovorka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_3_Speaker;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  Skorogovorka.SelectPatter
+                userType = new global::Skorogovorka.Skorogovorka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_SelectPatter;
+                userType.SetIsLocalType();
+                xamlType = userType;
                 break;
             }
             return xamlType;
