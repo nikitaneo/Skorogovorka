@@ -46,6 +46,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="MinHeight" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
     </RootType>
