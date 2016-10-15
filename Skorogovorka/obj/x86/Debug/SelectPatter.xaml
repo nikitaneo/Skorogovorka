@@ -8,8 +8,22 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:ConnectionId='1' x:Name="listView" HorizontalAlignment="Left" Height="549" Margin="10,81,0,0" VerticalAlignment="Top" Width="340" Header="Patters"/>
-
+        <ListView x:ConnectionId='1' Name="pattersList"                                   SelectionMode="None" IsItemClickEnabled="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="290"/>
+                            <ColumnDefinition Width="70"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding patter}" Grid.Column="0" HorizontalAlignment="Left" />
+                        <TextBlock Text="{Binding confidence}" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Items>
+            </ListView.Items>
+        </ListView>
     </Grid>
 </Page>
 

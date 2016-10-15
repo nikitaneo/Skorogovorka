@@ -45,7 +45,6 @@ namespace Skorogovorka
 
         private void pattersList_ItemClick(object sender, ItemClickEventArgs e)
         {
-            int itemId = -1;
             foreach(Patter p in patters)
             {
                 if (e.ClickedItem.ToString().Equals(p.patter))
