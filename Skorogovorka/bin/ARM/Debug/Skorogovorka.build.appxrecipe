@@ -337,6 +337,9 @@
     <AppxPackagedFile Include="C:\Users\Nikita\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\Assets\disclose-arrow.png">
+      <PackagePath>Assets\disclose-arrow.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nikita\Desktop\tmp\Skorogovorka\Skorogovorka\Assets\mic-512.png">
       <PackagePath>Assets\mic-512.png</PackagePath>
     </AppxPackagedFile>

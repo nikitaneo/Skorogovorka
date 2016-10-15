@@ -14,11 +14,11 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition />
             <RowDefinition/>
-            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Button x:Name="button" Content="Выбрать" HorizontalAlignment="Center" VerticalAlignment="Center" Click="button_Click" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Skorogovorka" VerticalAlignment="Center" Height="140" Width="350" TextAlignment="Center" FontSize="55"/>
 
     </Grid>
 </Page>

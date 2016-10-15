@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="Skorogovorka.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Skorogovorka"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:ConnectionId='1' x:Name="button" Content="Выбрать" HorizontalAlignment="Center" VerticalAlignment="Center"                      Grid.Row="1" Grid.Column="1"/>
+        <TextBlock x:ConnectionId='2' x:Name="textBlock" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Skorogovorka" VerticalAlignment="Center" Height="140" Width="350" TextAlignment="Center" FontSize="55"/>
+
+    </Grid>
+</Page>
+

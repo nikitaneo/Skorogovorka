@@ -14,6 +14,7 @@ using Windows.Media.Transcoding;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -97,13 +98,14 @@ namespace Skorogovorka
             if (!recordButtonPushed)
             {
                 recordButtonPushed = true;
+                __start_record_button.Source = new BitmapImage(new Uri(this.BaseUri, "Assets/mic-512_pushed.png"));
                 await CreateAudioGraph();
                 graph.Start();
             }
             else
             {
                 recordButtonPushed = false;
-
+                __start_record_button.Source = new BitmapImage(new Uri(this.BaseUri, "Assets/mic-512.png"));
                 graph.Stop();
 
                 TranscodeFailureReason finalizeResult = await fileOutputNode.FinalizeAsync();
@@ -250,6 +252,11 @@ namespace Skorogovorka
             }
 
             return result * conf;
+        }
+
+        private void image_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SelectPatter));
         }
     }
 }

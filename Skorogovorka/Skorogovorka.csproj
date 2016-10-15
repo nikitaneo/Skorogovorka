@@ -113,6 +113,7 @@
     <None Include="Skorogovorka_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\disclose-arrow.png" />
     <Content Include="Assets\mic-512.png" />
     <Content Include="Assets\mic-512_pushed.png" />
     <Content Include="Assets\whatstheweatherlike.wav" />
