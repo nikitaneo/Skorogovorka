@@ -119,8 +119,10 @@ namespace Skorogovorka
                 var resp = SendRequestAsync(Uri, accessToken, "audio/wav; samplerate=16000", path);
                 string json = resp;
                 ParsedJson jsonResp = JsonConvert.DeserializeObject<ParsedJson>(json);
-                var precise = StringDifference(textBlock.Text, jsonResp.header.lexical, jsonResp.results[0].confidence);
-                Result.Text = precise.ToString("F1") + " %";
+                json = jsonResp.header.lexical.Replace("<profanity>", "");
+                json = json.Replace("</profanity>", "");
+                var precise = StringDifference(textBlock.Text, json, jsonResp.results[0].confidence);
+                Result.Text = json+"\nТочность "+precise.ToString("F1") + " %";
             }
         }
 
@@ -194,7 +196,15 @@ namespace Skorogovorka
         }
 
         public double StringDifference(string example, string compare, double conf)
-        {
+        {      
+            example = example.Replace(',', ' ');
+            example = example.Replace('.', ' ');
+            example = example.Replace('?', ' ');
+            example = example.Replace('!', ' ');
+            example = example.Replace("\n", " ");
+            example = example.Replace("  ", " ");
+            example = example.Trim(' ');
+
             string[] ex = example.Split(' ');
             string[] cmp = compare.Split(' ');
 

@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>99F9E85A2232729118FD546BEF37D0E8C7B076475905B18798CAA8F7901B2453</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>E1081E256BF14C18F8307C29A2F1B3046F82C1939F936BAC04C5C3F151032C6A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>f69830a5-0de5-4fa9-9b50-14c5ebfae9a9_1.0.0.0_x86__8q94vvp0nn14t</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>f69830a5-0de5-4fa9-9b50-14c5ebfae9a9_8q94vvp0nn14t!App</RegisteredUserModeAppID>
     <RegisteredPackageID>f69830a5-0de5-4fa9-9b50-14c5ebfae9a9</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-15T07:30:21.924</Modified>
+      <Modified>2016-10-15T08:47:20.429</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\bin\x86\Debug\Skorogovorka.exe">
       <PackagePath>entrypoint\Skorogovorka.exe</PackagePath>
-      <Modified>2016-10-15T07:30:21.030</Modified>
+      <Modified>2016-10-15T08:47:20.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -454,57 +454,57 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\Assets\mic-512.png">
       <PackagePath>Assets\mic-512.png</PackagePath>
-      <Modified>2016-10-15T06:42:49.253</Modified>
+      <Modified>2016-10-15T08:03:23.417</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\Assets\mic-512_pushed.png">
       <PackagePath>Assets\mic-512_pushed.png</PackagePath>
-      <Modified>2016-10-15T06:42:49.256</Modified>
+      <Modified>2016-10-15T08:03:23.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2016-10-15T06:42:49.244</Modified>
+      <Modified>2016-10-15T08:03:23.408</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-15T06:42:49.245</Modified>
+      <Modified>2016-10-15T08:03:23.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-15T06:42:49.246</Modified>
+      <Modified>2016-10-15T08:03:23.411</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-15T06:42:49.248</Modified>
+      <Modified>2016-10-15T08:03:23.412</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-15T06:42:49.249</Modified>
+      <Modified>2016-10-15T08:03:23.413</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-15T06:42:49.251</Modified>
+      <Modified>2016-10-15T08:03:23.414</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-15T06:42:49.252</Modified>
+      <Modified>2016-10-15T08:03:23.415</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\Assets\whatstheweatherlike.wav">
       <PackagePath>Assets\whatstheweatherlike.wav</PackagePath>
-      <Modified>2016-10-15T06:42:49.262</Modified>
+      <Modified>2016-10-15T08:03:23.422</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2016-10-15T06:42:49.288</Modified>
+      <Modified>2016-10-15T08:03:23.454</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\bin\x86\Debug\Skorogovorka.xr.xml">
       <PackagePath>Skorogovorka.xr.xml</PackagePath>
-      <Modified>2016-10-15T07:12:27.918</Modified>
+      <Modified>2016-10-15T08:03:33.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -513,11 +513,11 @@
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-15T07:30:21.600</Modified>
+      <Modified>2016-10-15T08:11:03.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\windf\Documents\Visual Studio 2015\Projects\Skorogovorka\Skorogovorka\bin\x86\Debug\Core\Skorogovorka.exe">
       <PackagePath>Skorogovorka.exe</PackagePath>
-      <Modified>2016-10-15T07:30:21.919</Modified>
+      <Modified>2016-10-15T08:47:20.424</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
