@@ -64,6 +64,12 @@ namespace Skorogovorka
         private AudioDeviceInputNode deviceInputNode;
         private string path;
 
+
+        private string[] parts;
+        public double precise = 0;
+        private int count = 0;
+        bool allDone = false;
+
         public Speaker()
         {
             this.InitializeComponent();
@@ -77,6 +83,7 @@ namespace Skorogovorka
             {
                 string patter = (string)e.Parameter;
                 textBlock.Text = patter;
+                parts = patter.Split((char)0x000A);
             }
         }
 
@@ -123,8 +130,23 @@ namespace Skorogovorka
                 ParsedJson jsonResp = JsonConvert.DeserializeObject<ParsedJson>(json);
                 json = jsonResp.header.lexical.Replace("<profanity>", "");
                 json = json.Replace("</profanity>", "");
-                var precise = StringDifference(textBlock.Text, json, jsonResp.results[0].confidence);
-                Result.Text = json + "\nТочность " + precise.ToString("F1") + " %";
+
+                if (allDone)
+                {
+                    precise = 0;
+                    count = 0;
+                    Result.Text = "";
+                    allDone = false;
+                }
+                var temp = StringDifference(parts[count], json, jsonResp.results[0].confidence);
+                precise += temp;
+                Result.Text += json + " - " + temp.ToString("F1") + " %\n";
+                if (count + 1 < parts.Length) { count++; }
+                else
+                {
+                    Result.Text += "Общая точность: " + (precise / parts.Length).ToString("F1") + "%\n";
+                    allDone = true;
+                }
             }
         }
 
@@ -226,10 +248,20 @@ namespace Skorogovorka
                     {
                         count--;
                     }
-                    if (string.Compare(element, cmp[count++], true) != 0)
+                    if (element.Length == cmp[count].Length)
                     {
-                        result -= diff * element.Length;
+                        int ct = element.Length - 1;
+                        while (ct >= 0)
+                        {
+                            if (element[ct] != cmp[count][ct])
+                            {
+                                result -= diff;
+                            }
+                            ct--;
+                        }
+
                     }
+                    count++;
                 }
             }
             else
@@ -240,11 +272,20 @@ namespace Skorogovorka
                     if (count + 1 > cmp.Length) { count = cmp.Length - 1; };
                     if (element.Length == cmp[count].Length)
                     {
-                        if (string.Compare(element, cmp[count], true) != 0)
+                        if (element.Length == cmp[count].Length)
                         {
-                            result -= diff * element.Length;
-                            count++;
+                            int ct = element.Length - 1;
+                            while (ct >= 0)
+                            {
+                                if (element[ct] != cmp[count][ct])
+                                {
+                                    result -= diff;
+                                }
+                                ct--;
+                            }
+
                         }
+                        count++;
                     }
                     else
                     {

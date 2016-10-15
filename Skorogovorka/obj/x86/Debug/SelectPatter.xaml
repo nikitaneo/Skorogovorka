@@ -16,8 +16,8 @@
                             <ColumnDefinition Width="290"/>
                             <ColumnDefinition Width="70"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding patter}" Grid.Column="0" HorizontalAlignment="Left" />
-                        <TextBlock Text="{Binding confidence}" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <TextBlock Text="{Binding patter}" Grid.Column="0" Padding="0, 5, 0, 0" HorizontalAlignment="Left" />
+                        <TextBlock Text="{Binding confidence}" Grid.Column="1" Padding="0, 5, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
